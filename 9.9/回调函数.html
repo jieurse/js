@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		// 调用函数--删除、添加元素
+// var arr=[1,2,3,4,5,6,7,8];
+// document.write(splice(arr,2,1,'x','y','z'));
+// 	function splice(arr,pos,num,...rest){
+// 		var newarr=spliceDelete(arr,pos,num);
+// 		if (rest.length>0) {
+// 			newarr=spliceAdd(newarr,pos,...rest);
+// 		}return newarr;
+// 	}
+//////////////////////////////////////////////////
+/*-<>-/*|*\*_*/
+/*some every*/
+// var arr=[1,2,3,4,5,6,7,8];
+// var a=some(arr,function(value){
+// 	return value<0;
+// })
+// document.write(a);
+// function some(arr,fn){
+//  for(var i=0;i<arr.length;i++){
+//  	if(fn(arr[i])){
+//  		return true;
+//  	}
+//  }return false;
+// }
+// var b=every(arr,function(value){
+// 	return value>10;
+// })
+// document.write(b);
+// function every(arr,fn){
+// 	for(var i=0;i<arr.length;i++){
+// 		if(!fn(arr[i])){
+// 			return false;
+// 		}
+// 	}return true;
+// }
+/*  回调函数--将函数当做参数
+   递归--函数自调用 有出口
+*/
+
+// arr数组传给arr1 
+//地址（浅拷贝）
+//var arr1=arr
+//传值（深拷贝）
+//arr1[arr1.length]=arr[i];
+/*var arr=[1,2,3,4,['x','y','z']];
+var arr1=copy(arr);
+document.write(arr);
+document.write(arr1);
+function copy(arr){
+	var newarr=[];
+	for(var i=0;i<arr.length;i++){
+		if(typeof arr[i]=='object'){
+	        newarr[i]=copy(arr[i]);
+		}
+		else{
+			newarr[i]=arr[i];
+		}
+	}return newarr;
+}*/
+
+// fn(0);
+// function fn(num){
+// 	if(num<4){
+// 		fn(++num);
+// 	document.write(num);
+//     }
+// }
+	</script>
+</body>
+</html>

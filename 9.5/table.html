@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>table</title>
+</head>
+<body>
+	<script>
+    任一行任一列表格
+    // var a=prompt("请输入行",0);
+    // var b=prompt("请输入列",0);
+    // document.write('<table border=1 cellspacing=0>');
+    //   for(var i=1;i<=a;i++){
+    //   	document.write('<tr>');
+    //   	for(var j=1;j<=b;j++){
+    //   		document.write('<td>'+i+'-'+j+'</td>');
+    //   	}
+    //   	document.write('</tr>');
+    //   }
+    // document.write('</table>');
+
+	99乘法表
+	第一种
+    // document.write('<table border=1 cellspacing=0>');
+    //   for(var i=1;i<10;i++){
+    //   	document.write('<tr>');
+    //   	for(var j=1;j<=i;j++){
+    //   		var a=j*i;
+    //   		document.write('<td>'+j+'*'+i+'='+a+'</td>');
+    //   	}
+    //   	document.write('</tr>');
+    //   }
+    // document.write('</table>');
+    第二种
+    // var table="<table>"
+    //  for(var i=1;i<10;i++){
+    //  table+="<tr style='background:red;'>";
+    //   for(var j=1;j<=i;j++){
+    //   	table+="<td>"+i+"-"+j+"</td>";
+    //   }
+    //  table+="</tr>";
+    //  }
+    // document.write(table);
+    第三种
+    // for(var i=1;i<10;i++){
+    // 	for(var j=1;j<=i;j++){
+    //       if((i==3 && j==3)||(i==4 && j==3)){
+    // 		document.write('&nbsp&nbsp');
+    //       }
+    // 		document.write(i+'*'+j+'='+i*j);
+    // 		document.write('&nbsp&nbsp');
+    // 	}document.write('</br>');
+
+    // } 
+    隔行列换色
+    // document.write('<table border=1 cellspacing=0 width=10>');
+    //   for(var i=1;i<10;i++){
+    //    if(i%2==0){    
+    //     document.write('<tr bgcolor=green>');
+    //    }
+    //    else{
+    //     document.write('<tr bgcolor=blue>');
+    //    }
+    //    document.write('<tr>');
+    //   	for(var j=1;j<=10;j++){
+    //     if(j%2==1){
+    //       document.write('<td style="background:red">'+'&&&&&'+'</td>');
+    //     }
+    //     else{
+    //       document.write('<td style="background:yellow">'+'&&&&&'+'</td>');
+    //     }
+    //   	document.write('<td>'+'&&&&&'+'</td>');
+    //   	}document.write('</tr>');
+    //   }
+    // document.write('</table>');	
+    金字塔
+    // var row=5;
+    // for(var i=1;i<=row;i++){
+    //    for(var j=1;j<=row-i;j++){
+    //       document.write('&nbsp;');
+    //    }
+    //    for(var j=1;j<=2*i-1;j++){
+    //    	document.write('*');
+    //    }document.write('<br/>');
+    // }
+    菲波那切数列
+    // var i=1,j=1;
+    // document.write(i+'&nbsp');
+    // document.write(j+'&nbsp');
+    // for(var k=0;k<=100;){
+    //      k=i+j;
+    //      document.write(k+'&nbsp');
+    //      i=j;
+    //      j=k;
+    // }
+    数组
+    一维数组
+    最大值、最小值
+    // var arr=[1,82,67,40,54,6];
+    // var max=arr[0];
+    // for(var i=0;i<=arr.length-1;i++){
+    //    if(max<arr[i]){ 
+    //       max=arr[i]; 
+    //    }
+    // }
+    // document.write(max);
+    升序和降序
+    // var arr=[1,82,67,40,54,6];
+    // for(var i=0;i<=arr.length;i++){
+    //   for(var j=i+1;j<=arr.length;j++){
+    //   	if(arr[i]<arr[j]){
+    //      var temp=arr[i];
+    //      arr[i]=arr[j];
+    //      arr[j]=temp;
+    //   	}
+    //   }
+    // }
+    // document.write(arr);
+    while语句
+    // 先判断后执行
+    // var i=1;
+    // var sum=11;
+    // while(i<=10){
+    // 	sum+=i;
+    // 	i++;
+    // }
+    // document.write(sum);
+    do  while语句
+    // 先执行后判断
+    // do{
+    //     sum+=i;
+    // 	i++;
+    // }while(i<=10)
+    // document.write(sum);
+    continue语句
+    // var a=0;
+    // for(var i=0;i<=10;i++){
+    //    if(i%2==0){
+    //    	continue;
+    //    }
+    // }
+    //    document.write(i);
+    break语句
+    // var a=0;
+    // for(var i=0;i<=10;i++){
+    //    if(i%2==1){
+    //    	break;
+    //    }
+    // }
+    //    document.write(i);
+    二维数组的最大值
+    // var max=0;
+    // var arr=[[80,60,11],[29,45,67],[65,33,90]];
+    // for(i=0;i<arr.length;i++){
+    // 	for(j=0;j<arr[i].length;j++){
+    // 		if(max<arr[i][j]){
+    //         max=arr[i][j];
+    // 		}
+    // 	}
+    // }
+    // document.write(max);
+    消除空格
+    // var arr=[1,2,,3,4,,5,6,,7,8];
+    // var arr1=[];
+    //  for(var i=0;i<arr.length;i++){
+    //   // 会发生数据类型的不一致
+    //   // arr[i]数据类型为number--undefined
+    //   // typeof数据类型为string
+    //     if(arr[i]!=undefined){
+    //    	arr1[arr1.length]=arr[i];
+    //     }
+    //     if((typeof arr[i])!='undefined'){
+    //      arr1[arr1.length]=arr[i];
+    //      }
+    //     alert(typeof(arr[i]));
+    //  }document.write(arr1);
+    字符串${}不知道
+    // for(var i=0;i<=4;i++){
+    // 	document.write("这是外层第${i}层");
+    // 	for(var j=0;j<=4;j++){
+    //     document.write("这是内层第${j}层");
+    // 	}
+    // }
+    任意行  任意列
+    函数变量 ->形参(rows,cols)->实参(调用函数的时候)
+    // table(5,6);
+    // function table(rows,cols){
+    //   document.write('<table border=1 cellspacing=0>');
+    //   for(var i=1;i<=rows;i++){
+    //   	document.write('<tr>');
+    //   	for(var j=1;j<=cols;j++){
+    //   		document.write('<td>'+i+'-'+j+'</td>');
+    //   	}
+    //   	document.write('</tr>');
+    //   }
+    // document.write('</table>');
+    // }
+
+    // 最大值、排序
+    // 金字塔、数列、排序、最大值、
+	</script>
+</body>
+</html>

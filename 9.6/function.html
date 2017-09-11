@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<!-- 金字塔、数列、排序、最大值、 -->
+	<script>
+	// 金字塔
+	//     *     1 2 3 4 5
+	//    ***    1 3 5 7 9   2i-1
+	//   *****   4 3 2 1 0   j-i
+	//  *******
+	// *********
+	//     tower(9);
+	// 	function tower(rows){
+ //           for(var i=1;i<=rows;i++){
+	//          for(var j=1;j<=rows-i;j++){
+	//            document.write("_");
+	//          }
+	//          for(var j=1;j<=2*i-1;j++){
+	//          	document.write("*");
+
+	//          }document.write("<br>");
+	//        }
+	// //     }
+	// 菲波那切数列
+	// // 1 1 2 3 5 8 13 21
+	// var i=1;
+	// var j=1;
+	// var k=0;
+	// for(;k<100;){
+	// 	k=i+j;
+	// 	document.write(k+'&nbsp');
+	// 	i=j;
+	// 	j=k;
+	// }
+	// 数列最大值
+	// var arr=[[12,89,43],[23,4,33],[38,98,78]];
+	// sequence(arr);
+	// function sequence(arr){
+	// var max=arr[0][0];
+	// for(var i=0;i<arr.length;i++){
+	//       for(var j=0;j<arr.length;j++){
+	//          if(max<arr[i][j]){
+	//             max=arr[i][j];
+	//          }
+	//       }
+	// }document.write(max);}
+	
+	// 数列排序（默认参数）
+	// var a1=[12,89,43,23,4,33,38,98,78];
+	// sort(a1,">");
+	// function sort(a,type){
+		// 带有默认值的参数写到后面
+	   // 给一个默认值(没传type)
+	   // 1、if语句
+	   //    if(type=undefined){
+	   //        type="<";
+	   //    }
+	   // 2、三元表达式
+       //    type=type==undefined?">":type;
+       // 3、逻辑运算符****
+       // type=type||"<";
+       // alert(type);
+       // 4、可以在函数中直接添加默认值
+       // 有值默认值失效
+       // undefined==默认值
+       // null false==null  false
+       // function sort(a,type='>'){}
+	 //       if(type=="<"){
+	 //         sortUp(a);
+	 //       }else(type==">")
+	 //       {
+	 //         sortDown(a);
+	 //       }
+	 //       document.write(a);
+	// }
+
+	// function sortUp(a){
+ //    for(var i=0;i<a.length;i++){
+ //    	for(var j=0;j<i+1;j++){
+	//         if(a[i]<a[j]){
+	//       	var temp=a[i];
+	//       	a[i]=a[j];
+	//       	a[j]=temp;
+	//         }
+ //    	 } 
+ //    }document.write(a);
+ //   }
+ //   function sortDown(a){
+ //    for(var i=0;i<a.length;i++){
+ //    	for(var j=0;j<i+1;j++){
+	//         if(a[i]>a[j]){
+	//       	var temp=a[i];
+	//       	a[i]=a[j];
+	//       	a[j]=temp;
+	//         }
+ //    	 } 
+ //    }document.write(a);
+ //   }
+ // 在数组后添加任意元素
+ // var arr=[1,2,3,4,5,6];
+ // push(arr,'a','b','c');
+//  // rest参数：
+//  // value--数组[空数组]...value接收剩余参数，必须在最后
+//   function push(arr,...value){
+//   for(var i=0;i<value.length;i++){
+//   	arr[arr.length]=value[i];
+//   } document.write(arr);
+// }
+ // function push(arr){
+ // 	for(var i=1;i<arguments.length;i++){
+ //       arr[arr.length]=arguments[i];
+ // 	}
+ //   document.write(arr);
+ // }
+ // return 在函数调用结束时给函数值;
+ //        用于终止函数
+ // 判断数组是否有特定值，存在true,false
+ // var arr =[12,2,64,66,97,7,66];
+ // document.write(fn(arr,2));
+ // function fn(arr,value){
+ // 	if(!(typeof arr=='object'&&arguments.length>1)){
+ //       return 'errer';
+ //       // document.write("输入错误");
+ // 	}
+ //   for(var i=0;i<arr.length;i++){
+ //     if(arr[i]==value)
+ //     {
+ //     	// 返回+终止
+ //        return true;
+ //     }
+ //   }return false;
+ // }
+ // 判断调用数组师父符合条件
+ //参数大于两个 arguments.length
+ //函数外访问num--无法访问（局部变量！=全局变量）
+ 
+ // 数组转化为字符串
+// function str(arr,st){
+//  var st=st==undefined?"-":st;
+//  str=str||'-';
+//  var result='';
+//  for(var i=0;i<arr.length;i++){
+// 	  if(i<arr.length-1){
+// 	  	 result+=arr[i]+st;
+// 	  }
+// 	  else{
+// 	  	 result+=arr[i];
+// 	  }
+//  }return result;
+//  }
+ // var arr=[1,2,3,4,5,6,7];
+ // document.write( str(arr));
+ // 筛选数组里的偶数--新数组
+ // filter
+ // var arr=[1,2,3,4,5,6,7];
+ // document.write(filter(arr));
+ // function filter(arr){
+ // var newarr=[];
+ // for(var i=0;i<arr.length;i++){
+ //  if(arr[i]%2==0){
+ //   newarr[newarr.length]=arr[i];
+ //  }
+ // }return newarr;
+ // }
+ // 作用域--变量或者函数
+ /*
+ 宿主--执行环境
+  */
+ // var num=10;
+ // function fn(){
+ // 	alert(num);
+ // 	var num='a';
+ // 	alert(num);
+ // 	aa();
+ // 	function aa(){
+ //      alert(num);
+ // 	}
+ // }alert(num);
+ // fn();
+ // 四则运算--传递函数
+ /* 
+ function aa(num1,num2){
+  return num1*2+num2;
+ }
+ function bb(num1,num2){
+  return num1-num2;
+ }
+  function cc(num1,num2){
+  return num1*num2;
+ }
+ function math(num1,num2,fn){
+ 	return fn(num1,num2);
+ }
+ var a=math(2,3,aa);
+ document.write(a);*/
+ var arr=[1,7,8,9,5,6,7,8];
+var d=indexOf(arr,5);
+document.write(d);
+function indexOf(arr,value){
+	for(var i=0;i<arr.length;i++){
+      if(arr[i]==value){
+      	return i;
+      }
+	}return -1;
+}
+</script>
+</body>
+</html>
