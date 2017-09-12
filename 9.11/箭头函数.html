@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>箭头函数</title>
+</head>
+<body>
+	<script>
+/*箭头函数--回调函数*/
+	var fn=function(a){
+		return a;
+	}
+// 没有参数的时候=var fn=function(){}
+	var fn=()=>a;
+// 有参数的时候
+	var fn=a=>a;
+	var fn=(a,b)=>a+b;
+	var fn=(a,b)=>{
+		alert(a+b);
+		alert(a-b);
+		return[a,b];
+	}
+	alert(fn(10));
+//构造函数
+	var f=map(arr,function(value){
+		return value*2;
+	})
+	var f1=map(arr,(value)=>value*2);
+// alert(num);--报错
+	</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>闭包函数</title>
+</head>
+<body>
+	<script>
+/*闭包函数*/
+	function fn(){
+		var num=12;
+		return fn1;
+		function fn1(){
+			num++;
+			return num;
+		}
+	} 
+//result值为fn1函数,result()执行fn1函数
+	var result=fn();
+	alert(result());
+	</script>
+</body>
+</html>
