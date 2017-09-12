@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+/*闭包函数
+将fn1中的num(局部变量)返回成fn中的全局变量
+函数内在包含子函数，并最终return子函数。
+而闭包函数的最大价值在于：我们可以在函数的外部（即子函数），直接读取该函数的局部变量。*/
+// function fn(){
+// 	var num=12;
+// 	return fn1;
+// 	function fn1(){
+// 		num++;
+// 		return num;
+// 	}
+// } 
+//result值为fn1函数,result()执行fn1函数
+// var result=fn();
+// alert(result());
+/*箭头函数--回调函数
+基本用法：箭头函数相当于匿名函数，并且简化了函数定义
+*/
+/*var fn=function(a){
+	return a;
+}*/
+//没有参数的时候=var fn=function(){}
+// var fn=()=>a;
+// //有参数的时候
+// var fn=a=>a;
+// var fn=(a,b)=>a+b;
+// var fn=(a,b)=>{
+// 	alert(a+b);
+// 	alert(a-b);
+// 	return[a,b];
+// }
+// alert(fn(10));
+//注意事项：函数中没有arguments对象,有arguments变量
+//构造函数
+/*var f=map(arr,function(value){
+	return value*2;
+})
+var f1=map(arr,(value)=>value*2);*/
+
+// alert(num);---报错
+//暂时性的死区
+/*let num;
+alert(num);---undefined
+num1=10;
+alert(num);---10
+// 循环之后释放出全局变量i
+for(var i=0;i<10;i++){
+document.write(i);
+}
+document.write(i);*/
+/*块级作用域---区分用{}
+只针对let,不适用于var
+*/
+/*{let num=10;
+	console.log(num);
+}
+console.log(num);---报错
+{var num=10;
+	console.log(num);
+}
+console.log(num);---不会报错*/
+// var arr=[];
+// for(let i=0;i<10;i++){
+// arr[i]=function(){
+// 	alert(i);
+// }
+// }
+// arr[2];----2
+// let 每次都是新的作用域，会记录每次i的值
+// 内置顶层函数--可以直接用
+/*
+escape()  unescape()  Nunmer()  String()
+Boolean() parseInt()  parseFloat() isNaN()
+ */
+/*escape()--对字符串(汉字)进行编码*/
+let str='张';
+document.write(escape(str));
+/*unescape()--对字符串(汉字)进行解码*/
+var a = "%u5F20";  
+document.write(unescape(a));
+/*Number()--转化为数值类型
+undefined--NaN  true--1   false/null--0
+'123'--123      0123--83(0也算8进制)
+无法转换的某些  10px,abc,3.3.3--NaN
+*/
+document.write(Number('123'));
+document.write(Number(true));
+/*String()--转化为字符串*/
+/*Boolean()--''、null、undefined、false、0、NaN*/
+/*parseInt()--字符串转换为整型(数字)
+100px、0b888、-1.0e33、10.6--100、0、-1、10
+数字、+、-、空格--第一个数字开始到第一个非数字结束
+*/
+/*parseFloat()--字符串转换为浮点型数(小数)
+10.6y--10.6
+数字、+、-、空格--第一个小数开始到第一个非小数结束
+*/
+/*isNaN()--判断一个数能否转换成数值类型。*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>
