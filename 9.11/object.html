@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>object对象</title>
+</head>
+<body>
+	<script>
+		//1、json--object  区别块级作用域
+		//=    let zhang =new Object()
+        /*let oppo={
+        	brand:'oppo R9',
+        	color:'pink',
+        	size:'5.5',
+        	action:function(){
+        		console.log('美颜');
+        	},
+        };
+        // 3、Object
+        let vivo = new Object('vivo');
+        oppo.brand='oppo R11';
+        // console.log(oppo.constructor);
+        console.log(oppo.brand);
+        console.log(oppo.action());
+        for(let i in oppo){
+        	console.log(`${i}---${oppo[i]}`)
+        }*/
+		//constructor--返回构造函数
+		//2、构造函数
+		/*function Person(){
+		}
+		let zhang = new Person();
+		let wang  = new Person();
+		//添加属性
+		zhang.age=18;
+		zhang.name='张';
+		//方法
+		zhang.active=function(){
+			console.log(zhang.age);
+		}
+		//访问
+		zhang.active();
+		document.write(zhang.age);
+		document.write(zhang.name); */
+        //传参数
+		/*function Student(name,age,sex){
+         this.name=name;
+         this.age=age;
+         this.sex=sex;
+         this.active=function(){
+           console.log('跳舞');
+         }
+		}
+		var liqi=new Student('李琦',18,'男')
+		var xinxin=new Student('xinxin',23,'女')
+		var zhu=new Student('zhu',20,'男')
+		console.log(liqi,xinxin,zhu);
+		liqi.age=55;
+		// console.log(liqi.age);
+		liqi.active();
+		// alert(liqi.active());---undefined
+        /*for in*/
+         /*alert(liqi['name'])
+        liqi['active']();
+        for(let i in liqi){
+        	//i--字符串
+        	// console.log(`${i}---${liqi.i}`)
+        	// 访问时访问name---liqi.'name'
+        	console.log(`${i}---${liqi[i]}`)
+        }*/
+        // 4、class
+        class vivo{
+        	constructor(){
+        		this.brand='vivo X9';
+        		this.color='yellow';
+        	}
+        	test(){
+        		console.log('信息');
+        	}
+        }   
+        // let vivo X9=new vivo;      
+        // console.log(test());
+        // for(let i in vivo X9){
+        //   console.log(`${i}---$vivo[i]`);
+        // }
+        /*class Oppo{
+        	constructor(){
+        		this.color="pink";
+        		this.style=function(){
+                   console.log('方型');
+        		}
+        	}
+        	//方法：
+        	study(){
+
+        	}
+        	//不加逗号
+        }
+        let oppo R9=new Oppo();
+        oppo R9.style();*/
+
+	</script>
+</body>
+</html>
