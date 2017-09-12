@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>prototype</title>
+</head>
+<body>
+	<script>
+	// 1、构造函数传参、方法传参
+	// 2、方法调用自己的方法
+	// 3、属性为数字this[1]='a'
+	function Person(name,age,sex){
+	   this.name=name;
+	   this.age=age;
+	   this.study=function(){
+	   	console.log(this.age);
+	   }
+	   this.speech=function(){
+         console.log(this.study);
+	   }
+	}
+	let jie = new Person('jie',21) 
+	console.log(this.study());
+	</script>	
+</body>
+</html>

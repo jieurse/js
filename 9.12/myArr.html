@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>myArray</title>
+</head>
+<body>
+	<script>
+	    // 数组的构造函数
+		var arr=new myArray('a','b','c',1,2,3,4);
+		var arr1=new myArray(1,4,5,6,0);
+		// arr.push('s','v','f');
+		console.log(arr);
+        console.log(arr.indexOf('a'));
+        console.log(arr.lastIndexOf(3));
+        console.log(arr.includes('f'));
+        var somee=arr.some(function(value){
+               return typeof value=='number';
+        	})
+        var everyy=arr.every(function(value){
+               return value>0;
+        	})
+        	console.log(everyy);
+        console.log(somee);
+        console.log(arr.reverse());
+        console.log(arr.join());
+        // console.log(arr1.sort());
+        var maxx=arr1.max();
+        console.log(maxx);
+        var minn=arr1.min();
+        console.log(minn);
+    	/*var mapp=arr1.map(function(value){
+    		return value*2;
+    	})
+    	console.log(mapp);
+    	var filterr=arr1.filter(function(value){
+           return value>3;
+    	})
+    	console.log(filterr);*/
+
+		//构造函数中this属性
+        function myArray(...rest){
+        	for(let i=0;i<arguments.length;i++){
+               this[i]=arguments[i];
+        	}
+        	this.length=arguments.length;
+        	this.push=function(...rest){
+              for(let i=0;i<arguments.length;i++){
+              	this[this.length]=arguments[i];
+              	this.length++;
+              }
+        	}
+        	this.indexOf=function(value){
+        		for(let i=0;i<this.length;i++){
+                  if(this[i]==value){
+                      return i;
+                  }
+        		}
+        		return -1;
+        	}
+        	this.lastIndexOf=function(value){
+                for(let i=this.length-1;i>0;i--){
+                  if(this[i]==value){
+                  	return i;
+                  }
+                }
+                return -1;
+        	}
+        	this.includes=function(value){
+                for(let i=0;i<this.length;i++){
+                  if(this[i]==value){
+                     return true;
+                  }
+                }
+                return false;
+        	}
+        	this.reverse=function(){
+        		let newarr=[];
+        		for(let i=this.length-1;i>=0;i--){
+                   newarr[newarr.length]=this[i];
+        		}return newarr;
+        	}
+        	this.join=function(){
+        		let newarr=[];
+        		for(let i=0;i<this.length;i++){
+                  newarr+=this[i]+'-';
+        		}
+        		return newarr;
+        	}
+        	this.sort=function(){
+              for(let i=0;i<this.length;i++){
+                 if(this[i]>this[i+1]){
+                 	let temp=this[i+1];
+                 	this[i+1]=this[i];
+                 	this[i]=temp;
+                 }
+              }return this[i];
+        	}
+        	this.max=function(){
+              var max=this[0];
+              for(let i=1;i<this.length;i++){
+                if(max<this[i]){
+                   max=this[i];
+                }
+              }return max;
+        	}
+        	this.min=function(){
+              var min=this[0];
+              for(let i=1;i<this.length;i++){
+                if(min>this[i]){
+                   min=this[i];
+                }
+              }return min;
+        	}
+        	// this.qukong=function(){
+        		
+        	// }
+        	this.some=function(fn){
+        		for(let i=0;i<this.length;i++){
+                    if(fn(this[i])){
+                       return true;
+                    }
+        		}return false;
+        	}
+        	this.every=function(fn){
+               for(let i=0;i<this.length;i++){
+                 if(!fn(this[i])){
+                     return false;
+                 }
+               }return true;
+        	}
+        	this.map=function(fn){
+              let newarr=[];
+              for(let i=0;i<this.length;i++){
+              	newarr[newarr.length]=fn(this[i])
+              }
+              return newarr;
+        	}
+        	this.filter=function(fn){
+        		let newarr=[];
+        		for(let i=0;i<this.length;i++){
+        			if(fn(this[i])){
+                      return true;
+        			}
+        		}return false;
+        	}
+            /*
+            push   indexOf  lastindexOf   includes(有没有元素)
+            reverse  join  
+            sort(排序)  max min 去空
+            some every map(映射) filter(筛选)
+             */
+        }  
+	</script>
+</body>
+</html>
