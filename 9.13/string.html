@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>string</title>
+</head>
+<body>
+	<script>
+		/*object string number boolean array date regexp*/
+		// let str = new String('abcdabvv');
+		/*str.length=1;
+		console.log(str.charAt(2));
+		console.log(str.charCodeAt(2));
+		console.log(String.fromCharCode(98));
+		console.log(str.indexOf('ab'));
+		console.log(str.lastIndexOf('ab'));
+		console.log(str.includes('ab'));
+		// function includes(ostr,nstr){
+  //         if(){
+  //         	return true;
+  //         }
+  //         return false;
+		// }
+		console.log(str.slice(0,2));
+		console.log(str.slice(2));
+		console.log(str.slice(0,-1));
+		console.log(str.slice(0,str.length-1));
+		console.log(str.substring(0,2));
+		console.log(str.substr(0,2));
+		//对原数组没影响
+		console.log(str);*/
+		//只能替换第一次出现的
+		//不用函数进行替换
+		/*str=str.replace('ab','**');
+		str=str.replace('ab','**');
+		console.log(str);*/
+		//用函数进行替换
+		/*console.log(replaceAll(str,'ab'));
+		function replaceAll(str,rstr){
+			let nstr="*".repeat(rstr.length);
+			// let nstr ='';
+			// for(let i=0;i<rstr.length;i++){
+            //  nstr+='*';
+			// }
+			while(str.includes(rstr)){
+				str=str.replace(rstr,nstr);
+			}
+			return str;
+		}*/
+		/*let str1 = '   abcdabvv  ';
+        console.log(str1.trim());
+        console.log(str1);
+		let str2 = 'a b CdAWbvv';
+        console.log(str2.split(' ',3));
+        //大写
+        console.log(str2.toUpperCase());
+        //小写
+        console.log(str2.toLowerCase());
+        document.write(str.fontcolor('red'));
+        document.write(str.fontsize(7));
+        document.write(str.sup());
+        document.write(str.sub());*/
+
+        /*let url='https:/www.baidu.comhttps:/www.baidu.comhttps:/www.baidu.comhttps:/www.baidu.comhttps:/www.baidu.com';
+        console.log(position(url,'baidu'));*/
+       /* function position(url,rstr){
+        	let arr=[];
+			let nstr="*".repeat(rstr.length);
+			while(url.includes(rstr)){
+				// arr=url.indexOf(rstr);
+				arr.push(url.indexOf(rstr))
+				url=url.replace(rstr,nstr);
+			}
+			return arr;
+		}*/
+		/*function position(url,rstr){
+			let arr = [];
+			for(let i=0;i<url.length;i++){
+	            if(rstr==url.substr(i,5)){
+	               arr.push(i);
+	            }
+			}return arr;
+		}*/
+        /*对象 方法 for方法  数组方法*/
+        
+	</script>
+</body>
+</html>

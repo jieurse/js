@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>instudent</title>
+</head>
+<body>
+	<script>
+		function Student(){
+           this.name='zhang';
+		}
+		function Person(){
+			this.name='lisi';
+		}
+		//判断对象是否从类中(构造函数)实例化出来的
+		//张 是否出自Student
+		let zhang =new Student();
+		console.log(zhang instanceof Student);
+		console.log(zhang instanceof Person);
+		let arr=[];
+		console.log(arr instanceof Array);
+	</script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>继承</title>
+</head>
+<body>
+	<script>
+		function Person(){
+        	this.name='lili',
+            this.age=18,
+            this.say=function(){
+          	   alert('Person的说');
+            }  
+        } 
+        // Person.prototype.say=function(){
+        //     alert('Person.prototype的说');
+        // }
+        function Student(){
+        	this.class='wuif-1707',
+            this.num=20131103,
+            this.say=function(){
+          	   alert('Student的说');
+            }  
+        }
+        // Student.prototype.say=function(){
+        //     alert('Student.prototype的说');
+        // }
+        Student.prototype = new Person();
+        let zhangsan =new Person();
+        let lisi =new Student();
+        //继承Student中的原型对象(Student.prototype)继承Person中的属性与方法
+        //__proto__返回构造函数的prototype
+        /*console.log(lisi); 
+        console.log(lisi.__proto__==Student.prototype);
+        console.log(Student.prototype.__proto__==Person.prototype);
+        console.log(Person.prototype.__proto__==Object.prototype);*/
+        
+        // console.log(lisi.say());
+        会覆盖
+        Student.prototype={}
+        所以加方法时
+        Student.prototype.say=function(){
+            alert('Student.prototype的说');
+        }
+
+        /* zhangsan继承顺序
+         Student>Student.prototype>Person>Person.prototype
+        */
+
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>myArray</title>
+</head>
+<body>
+	<script>
+		//class 先定义后实例化
+		/*class myArray{
+           constructor(...rest){
+           	for(let i=0;i<arguments.length;i++){
+               this[i]=arguments[i];
+           	}
+           	this.length=arguments.length;
+           	this.push=function(...rest){
+              for(let i=0;i<arguments.length;i++){
+              	// this[this.length]=arguments[i];
+              	// this.length++;
+                 this[this.length++]=arguments[i];
+                 
+              }
+        	}
+           	this.map=function(fn){
+           		let newarr=new myArray();
+           		for(let i=0;i<this.length;i++){
+                     this.push(fn(this[i]));
+           		}return newarr;
+           	}
+           }
+		}
+	  	let arr=new myArray(1,5,4,2);
+	  	arr.push(1,3);
+    	console.log(arr);
+        var mapp=arr.map(function(value){
+          return value*2;
+        })
+        console.log(mapp);*/
+
+
+
+        //写属性
+        function Person(){
+        	this.name='lili',
+            this.age=18
+           //添加方法1
+            this.say=function(){
+          	   alert('说');
+            }  
+        }
+        //写方法--person的原型对象--在代码段
+        Person.prototype={
+        	//添加方法2
+          say:function(){
+          	alert('说');
+          },
+
+        }
+        let zhang = new Person();
+        // let lisi = new Person();
+        //Person.prototype(本质为函数)
+        //当做let Person.prototype = new Person;
+        //添加方法3
+        // Person.prototype.play=function(){
+        //     alert('玩');
+        // }
+        zhang.agee=function(){
+            console.log('555');
+        }
+        
+        zhang.agee();
+        //删除方法或属性
+        delete zhang.agee;
+        delete age;
+        zhang=null;
+        // console.log(zhangsan.agge());
+        //张三在栈中
+        //比较的是地址（函数、空数组堆区存储）---false
+        // console.log(zhangsan==lisi);
+        // console.log(zhangsan.say==lisi.say);
+        //比较的是值---true
+        // console.log(zhangsan.say()==lisi.say());
+	</script>
+</body>
+</html>
