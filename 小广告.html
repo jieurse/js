@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>小广告</title>
+</head>
+<style>
+	.box{
+		width: 200px;
+		height: 200px;
+		background: red;
+		position: absolute;
+	}
+</style>
+<body>
+<div class="box">
+</div>
+	<script>
+	let box=document.getElementsByClassName('box')[0];
+	let max=window.innerHeight-box.offsetHeight;
+	let speed=10;
+	let t=setInterval(move,60);
+		function move(){
+		let tops=box.offsetTop+speed;
+		if(tops>=max){
+			tops=max;
+			speed*=-1;
+		}if(tops<=0){
+			tops=0;
+			speed*=-1;
+		}
+		box.style.top=tops+'px';
+		}
+	</script>
+</body>
+</html>
