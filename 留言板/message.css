@@ -1,0 +1,88 @@
+/*
+* @Author: gaojie
+* @Date:   2017-09-25 18:45:00
+* @Last Modified by:   gaojie
+* @Last Modified time: 2017-09-25 23:06:33
+*/
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	box-sizing: border-box;
+}
+a{
+	text-decoration: none;
+	color: black;
+}
+.messtop{
+	width: 500px;
+	height: 300px;
+	margin: 40px auto;
+	font-size: 14px;
+	color: black;
+}
+.liu{
+	width: 500px;
+	height: 50px;
+	font-size: 30px;
+	text-align: center;
+	line-height: 30px;
+}
+.messtop1{
+	/* display: block; */
+	width: 500px;
+	height: 200px;
+}
+.messtop2{
+	width: 500px;
+	height: 50px;
+	position: relative;
+}
+.m{
+	/* display: block; */
+	width: 180px;
+	height: 50px;
+}
+.m>button{
+	display: block;
+	width: 80px;
+	height: 50px;
+	background: #62B9D3;
+	border-radius: 5px;
+	font-size: 20px;
+	float: left;
+	cursor: pointer;
+}
+
+.m>a{
+	display: block;
+	width: 80px;
+	height: 50px;
+	font-size: 20px;
+	margin-left: 80px;
+	padding-top:  10px;
+	line-height: 30px;
+	text-align: center;
+}
+.m>a:hover{
+	text-decoration: underline;
+}
+.sp{
+	position: absolute;
+	top: 20px;
+	right: 5px;
+	/* display: block; */
+	width: 50px;
+	height: 50px;
+}
+.sp1{
+	position: absolute;
+	top: 0px;
+	right: 55px;
+}
+.b{
+	width: 500px;
+	height: 100px;
+	margin: 10px auto;
+	background: greenyellow;
+}

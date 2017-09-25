@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>留言板</title>
+	<link rel="stylesheet" href="css/message.css">
+	<script scr="js/message.js"></script>
+</head>
+<body>
+	<div class="messtop">
+		<div class="liu">留言板</div>
+		<textarea name="" id="mess" class="messtop1" value="" onkeydown="checknum()" onkeyup="checknum()"></textarea>
+		<div class="messtop2">
+			<div class="m">
+			<button id="button">提交</button>
+			<a href="javascript:void(0);" id="cancel">取消</a>
+			</div>
+			<span class="sp">
+				<span class="sp1">0</span>
+				/
+				<span class="sp2">200</span>
+			</span>
+		</div>
+	</div>
+	<div class="messbottom"></div>
+	<script>
+	let mess=document.getElementById('mess');
+		let text = document.querySelector('textarea');
+		let button=document.getElementById('button');
+		let cancel=document.getElementById('cancel');
+		let messbottom=document.getElementsByClassName('messbottom')[0];
+		let sp1=document.getElementsByClassName('sp1')[0];
+		function checknum(){
+	        let max = 200;
+	        let len =mess.value.length;    
+	        if(len>max){
+	            mess.value = mess.value.substring(0,max);
+	            return;
+	        }
+	        sp1.innerHTML=len;
+		    }
+	    checknum();
+		button.onclick=function(){
+            if(mess.value.trim() == ""){
+ 				alert('留言不能为空');
+ 				return false;
+            }
+            else if(mess.value){
+            	// alert('提交成功');
+            	let div1=document.createElement('div');
+				let arr=new Array();
+				arr.push(div1);
+				div1.className="b";
+				div1.innerText=mess.value;
+				messbottom.appendChild(div1);
+				mess.value = '';	
+            }	
+		}	
+		cancel.onclick=function(){
+			mess.value='';
+		}
+	</script>
+</body>
+</html>
