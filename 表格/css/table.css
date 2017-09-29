@@ -1,0 +1,51 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+body{
+	background: #dfdfdf;
+}
+main{
+	width: 500px;
+	height: auto;
+	/* border: 1px solid #000; */
+	margin: 0 auto;
+}
+h3{
+	margin: 0 auto;
+	line-height: 30px;
+	text-align: center;
+}
+table{
+	margin: 0 auto;
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+th{
+	border-right: 1px solid black;
+}
+tr{
+	height: 40px;
+}
+td{
+	padding: 20px;
+	border: 1px solid black;
+}
+tr:nth-of-type(2n){
+	background: skyblue;
+}
+.add{
+	float: right;
+	margin-right: 47px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.search{
+	float: right;
+	margin: 0 auto;
+	/* margin-right: 500px; */
+}
